@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script>
+            function validate(){
+                
+                var email=document.forms["register"]["Email"];
+                var pass=document.forms["register"]["Password"];
+               
+              
+                if(email.value==""){
+                    window.alert("Please enter your email");
+                    email.focus();
+                    return false;
+                }
+                if(pass.value=="" || pass.value.length<6){
+                    window.alert("Please enter a valid  password");
+                    pass.focus();
+                    return false;
+                }
+               
+               
+                if(email.value!="" && pass.value!="" ){
+                    alert("Login successful");
+                    return true;
+                }
+
+
+            }
+        </script>
+        <style>
+            .cont{
+                margin:50px;
+                text-align: left;
+                margin:50px;
+                text-align: left;
+                box-shadow:0 12px 12px 0 rgba(0,0,0,0.2);
+                padding :30px;
+                background-color: #f1f1f1;
+                
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .para1{
+                color:royalblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+        <div class="para1">
+        <h1 style="text-align:center">LOGIN PAGE</h1>
+        </div>
+        <form name="register" action="" onSubmit="return validate()" method="post">
+       
+        <p>Email-Address:<br><input type="email" id="email" name="Email"></p><br>
+        <p>Password:<br><input type="password" id="pass" name="Password"></p><br>
+       
+        
+        <p><input type="submit" value="Login" name="Submit"> </p>
+
+        </form>
+    </div>
+    </body>
+</html>
